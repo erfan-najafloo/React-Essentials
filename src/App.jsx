@@ -44,21 +44,9 @@ function App() {
               title={CORE_CONCEPTS[0].title}
               description={CORE_CONCEPTS[0].description}
             />
-            <CoreConsept
-              image={CORE_CONCEPTS[1].image}
-              title={CORE_CONCEPTS[1].title}
-              description={CORE_CONCEPTS[1].description}
-            />
-            <CoreConsept
-              image={CORE_CONCEPTS[2].image}
-              title={CORE_CONCEPTS[2].title}
-              description={CORE_CONCEPTS[2].description}
-            />
-            <CoreConsept
-              image={CORE_CONCEPTS[3].image}
-              title={CORE_CONCEPTS[3].title}
-              description={CORE_CONCEPTS[3].description}
-            />
+            <CoreConsept {...CORE_CONCEPTS[1]} />
+            <CoreConsept {...CORE_CONCEPTS[2]} />
+            <CoreConsept {...CORE_CONCEPTS[3]} />
           </ul>
         </section>
       </main>
