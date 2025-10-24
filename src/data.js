@@ -3,7 +3,7 @@ import propsImg from "./assets/config.png";
 import jsxImg from "./assets/jsx-ui.png";
 import stateImg from "./assets/state-mgmt.png";
 
-// Separates the application data (concepts, images, descriptions) from the CoreConcept component's logic. This improves component reusability and maintainability by moving static content to a dedicated external source.
+// Separates the application data (title, images, descriptions) from the CoreConcept component's logic. This improves component reusability and maintainability by moving static content to a dedicated external source.
 
 export const CORE_CONCEPTS = [
   {
