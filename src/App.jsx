@@ -2,7 +2,12 @@ import { CORE_CONCEPTS } from "./data";
 import Header from "./components/Header/Header";
 import CoreConsept from "./components/CoreConsept";
 import TabButton from "./components/TabButton";
+import { useState } from "react";
 function App() {
+  const [selectedTopic, setSelectedTopic] = useState("please click a button");
+  function handleSelecte(selectedButton) {
+    setSelectedTopic(selectedButton);
+  }
   return (
     <div>
       <Header />
@@ -23,11 +28,21 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton lable={"Component"} />
-            <TabButton lable={"Jsx"} />
-            <TabButton lable={"Props"} />
-            <TabButton lable={"State"} />
+            <TabButton
+              lable={"Component"}
+              onSelect={() => handleSelecte("Component")}
+            />
+            <TabButton lable={"Jsx"} onSelect={() => handleSelecte("jsx")} />
+            <TabButton
+              lable={"Props"}
+              onSelect={() => handleSelecte("props")}
+            />
+            <TabButton
+              lable={"State"}
+              onSelect={() => handleSelecte("state")}
+            />
           </menu>
+          {selectedTopic}
         </section>
       </main>
     </div>
