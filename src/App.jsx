@@ -3,8 +3,9 @@ import Header from "./components/Header/Header";
 import CoreConsept from "./components/CoreConsept";
 import TabButton from "./components/TabButton";
 import { useState } from "react";
+import { EXAMPLES } from "./data";
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState("please click a button");
+  const [selectedTopic, setSelectedTopic] = useState("components");
   function handleSelecte(selectedButton) {
     setSelectedTopic(selectedButton);
   }
@@ -29,8 +30,8 @@ function App() {
           <h2>Examples</h2>
           <menu>
             <TabButton
-              lable={"Component"}
-              onSelect={() => handleSelecte("Component")}
+              lable={"components"}
+              onSelect={() => handleSelecte("components")}
             />
             <TabButton lable={"Jsx"} onSelect={() => handleSelecte("jsx")} />
             <TabButton
@@ -42,7 +43,13 @@ function App() {
               onSelect={() => handleSelecte("state")}
             />
           </menu>
-          {selectedTopic}
+          <div id="tab-content">
+            <h3>{EXAMPLES[selectedTopic].title}</h3>
+            <p>{EXAMPLES[selectedTopic].description}</p>
+            <pre>
+              <code>{EXAMPLES[selectedTopic].code}</code>
+            </pre>
+          </div>
         </section>
       </main>
     </div>
