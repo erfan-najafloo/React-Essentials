@@ -44,15 +44,22 @@ function App() {
             <TabButton
               lable={"Components"}
               onSelect={() => handleSelecte("components")}
+              isSelected={selectedTopic === "components"}
             />
-            <TabButton lable={"Jsx"} onSelect={() => handleSelecte("jsx")} />
+            <TabButton
+              lable={"Jsx"}
+              onSelect={() => handleSelecte("jsx")}
+              isSelected={selectedTopic === "jsx"}
+            />
             <TabButton
               lable={"Props"}
               onSelect={() => handleSelecte("props")}
+              isSelected={selectedTopic === "props"}
             />
             <TabButton
               lable={"State"}
               onSelect={() => handleSelecte("state")}
+              isSelected={selectedTopic === "state"}
             />
           </menu>
           {tabContent}
